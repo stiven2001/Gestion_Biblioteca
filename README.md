@@ -1,4 +1,4 @@
-# iLib
+# Gestion_Biblioteca
 Basic system for managing a library on Java using Look And Feel and DAO Pattern. The ITPLibrary Version 2.0.
 
 ## Features

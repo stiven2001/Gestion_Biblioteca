@@ -1,6 +1,27 @@
 package com.mycompany.models;
 
 public class Lendings {
+    
+    private static int nextId = 1;  // Contador estático para los IDs
+     private static int nextuser_id = 1;
+      private static int nextIdbook_id = 1;
+    
+    public Lendings(int id, int user_id, int book_id, String date_out, String date_return) {
+        this.id = id;
+        this.user_id = user_id;
+        this.book_id = book_id;
+        this.date_out = date_out;
+        this.date_return = date_return;
+    }
+
+    public Lendings() {
+        this.id = nextId++; // Puedes reemplazar esto con un contador o un generador de ID si lo necesitas
+        this.user_id = nextuser_id++;
+        this.book_id = nextIdbook_id++;
+        this.date_out = "";
+        this.date_return = "";
+    }
+    
     private int id;
     private int user_id;
     private int book_id;

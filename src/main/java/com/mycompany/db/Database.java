@@ -10,10 +10,10 @@ import java.util.logging.Logger;
 public class Database {
     
     protected Connection conexion;
-    private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    private final String DB_URL = "jdbc:mysql://localhost/ilib";
+    private final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
+    private final String DB_URL = "jdbc:oracle:thin:@localhost:1521:ORCL";
     
-    private final String USER = "root";
+    private final String USER = "BibliotecaIbero";
     private final String PASS = "123456";
     
     public void Conectar() throws ClassNotFoundException {

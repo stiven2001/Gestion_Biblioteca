@@ -1,9 +1,27 @@
 package com.mycompany.models;
 
 public class Books {
+    
+    private static int nextId = 1;  // Contador estático para los IDs
+    
+    public Books(int id, String title, String fecha, String author, String category, String edit, String lang, String pages, String description, String ejemplares, int stock, int available) {
+        this.id = id;
+        this.title = title;
+        this.fecha = fecha;
+        this.author = author;
+        this.category = category;
+        this.edit = edit;
+        this.lang = lang;
+        this.pages = pages;
+        this.description = description;
+        this.ejemplares = ejemplares;
+        this.stock = stock;
+        this.available = available;
+    }
+    
     private int id;
     private String title;
-    private String date;
+    private String fecha;
     private String author;
     private String category;
     private String edit;
@@ -14,6 +32,25 @@ public class Books {
     private int stock;
     private int available;
 
+    /*public Books() {
+        
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }*/
+   public Books() {
+    this.id = nextId++;
+    this.title = "";
+    this.fecha = "";
+    this.author = "";
+    this.category = "";
+    this.edit = "";
+    this.lang = "";
+    this.pages = "";
+    this.description = "";
+    this.ejemplares = "";
+    this.stock = stock;
+    this.available = available;
+}
+
     public void setId(int id) {
         this.id = id;
     }
@@ -22,8 +59,8 @@ public class Books {
         this.title = title;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(String fecha) {
+        this.fecha = fecha;
     }
 
     public void setAuthor(String author) {
@@ -71,7 +108,7 @@ public class Books {
     }
 
     public String getDate() {
-        return date;
+        return fecha;
     }
 
     public String getAuthor() {

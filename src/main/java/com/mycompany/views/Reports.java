@@ -6,10 +6,12 @@ import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
 public class Reports extends javax.swing.JPanel {
+     private DAOLendings dao;
 
     public Reports() {
         initComponents();
         InitStyles();
+        dao = new DAOLendingsImpl(); // Inicializamos DAOLendingsImpl aquí
         LoadLendings();
     }
     
@@ -20,7 +22,6 @@ public class Reports extends javax.swing.JPanel {
     
     private void LoadLendings() {
         try {
-            DAOLendings dao = new DAOLendingsImpl();
             DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
             // Limpiamos tabla
             model.setRowCount(0);

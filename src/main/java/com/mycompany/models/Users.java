@@ -1,6 +1,32 @@
 package com.mycompany.models;
 
 public class Users {
+    
+    private static int nextId = 1;  // Contador estático para los IDs
+    
+    public Users(int id, String name, String last_name_p, String last_name_m, String domicilio, String tel, int sanctions, int sanc_money) {
+        this.id =id;
+        this.name = name;
+        this.last_name_p = last_name_p;
+        this.last_name_m = last_name_m;
+        this.domicilio = domicilio;
+        this.tel = tel;
+        this.sanctions = sanctions;
+        this.sanc_money = sanc_money;
+    }
+
+    public Users() {
+        this.id = nextId++;
+        this.name = "";
+        this.last_name_p = "";
+        this.last_name_m = "";
+        this.domicilio = "";
+        this.tel = "";
+        this.sanctions = sanctions;
+        this.sanc_money = sanc_money;
+    }
+
+    
     private int id;
     private String name;
     private String last_name_p;

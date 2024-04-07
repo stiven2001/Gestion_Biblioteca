@@ -9,10 +9,5 @@ Basic system for managing a library on Java using Look And Feel and DAO Pattern.
 ✔️ Movement logs.\
 ✔️ Lookup tables.\
 ✔️ DAO Pattern.
-
-## Video Preview
-
-https://www.youtube.com/watch?v=AgJMFhxvA40
-
 ## Getting Started
 Import the java project in your preferred IDE and import the database. Just edit the class `Database.java` with your database connection credentials.
